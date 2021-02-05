@@ -59,16 +59,42 @@ interface Apple extends Fruit {
  }
 */
 
-
-interface Class {
+interface Person {
   firstname:string
   lastname:string
   age:number
-  bloodtype:number
+  bloodtype:string
 }
-interface Teacher extends Class {
-  facultyId:number & string
+
+interface Class {
+  instructor: Teacher;
+  students: Student[]
 }
-interface Student extends Class {
-  studentId:number & string
+
+interface Teacher extends  Person {
+  facultyId:string;
+}
+
+interface Student extends Person {
+  studentId:string;
+}
+
+let oopClass: Class = {
+  instructor:{
+    firstname:"osivnsoj",
+    lastname:"ouboboub",
+    age:35,
+    bloodtype:"B-",
+    facultyId:"0123456"
+  }, 
+  
+  students:[
+      {
+    firstname:"osivnsoj",
+    lastname:"ouboboub",
+    age:35,
+    bloodtype:"B-",
+    studentId:"oeuwouvbs"
+    }
+]
 }
